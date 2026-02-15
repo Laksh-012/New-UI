@@ -9,24 +9,41 @@
     mc:Ignorable="d">
 
     <Grid>
+
+        <!-- Page Layout -->
         <Grid.RowDefinitions>
-            <RowDefinition Height="180"/>
+            <RowDefinition Height="900"/>
+            <!-- Top Menu Area -->
             <RowDefinition Height="*"/>
+            <!-- Content Area -->
         </Grid.RowDefinitions>
 
+        <!-- TOP MENU CONTAINER -->
+        <Grid Grid.Row="0"
+              Background="#222831"
+              CornerRadius="20"
+              Margin="0,60,0,0">
 
-        <Grid Grid.Row="0" Background="#222831" CornerRadius="20" Margin="60">
+            <!-- FIX: Define rows -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <!-- Buttons -->
+                <RowDefinition Height="*"/>
+                <!-- Frame -->
+            </Grid.RowDefinitions>
+
+            <!-- MENU BUTTONS -->
             <StackPanel Orientation="Horizontal"
                         VerticalAlignment="Center"
                         HorizontalAlignment="Center"
-                        CornerRadius="20"
-                        Spacing="20">
-                
+                        Spacing="20"
+                        Margin="20"
+                        Grid.Row="0">
+
                 <Button x:Name="DashboardBtn"
                         CornerRadius="20"
                         Content="DASHBOARD"
-                        Click="Dashboard_click"
-                        />
+                        Click="Dashboard_click"/>
 
                 <Button x:Name="ProtectionBtn"
                         CornerRadius="20"
@@ -47,8 +64,15 @@
                         CornerRadius="20"
                         Content="SETTINGS"
                         Click="Settings_click"/>
+
             </StackPanel>
-            <Frame x:Name="MainFrame" Grid.Row="1"/>
+
+            <!-- CONTENT FRAME -->
+            <Frame x:Name="MainFrame"
+                   Grid.Row="1"
+                   Margin="10"/>
+
         </Grid>
+
     </Grid>
 </Page>

@@ -14,6 +14,7 @@ namespace Test.Panel
         public SecurityPage()
         {
             this.InitializeComponent();
+            MainFrame.Navigate(typeof(DashboardPage));
 
         }
         private void Dashboard_click(object sender, RoutedEventArgs e)
