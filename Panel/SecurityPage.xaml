@@ -20,8 +20,8 @@
 
         <!-- TOP MENU CONTAINER -->
         <Grid Grid.Row="0"
-              Background="#222831"
-              CornerRadius="20"
+              Background ="#0F0F0F"
+              
               Margin="0,60,0,0">
 
             <!-- FIX: Define rows -->
@@ -37,32 +37,42 @@
                         VerticalAlignment="Center"
                         HorizontalAlignment="Center"
                         Spacing="20"
-                        Margin="20"
+                        Background="#1A1A1A"
+                        CornerRadius="10"
+                        Padding="70,10,70,10"
                         Grid.Row="0">
+                <Border Background="#111827"
+                        CornerRadius="12">
 
+                    <Border.Shadow>
+                        <ThemeShadow/>
+                    </Border.Shadow>
+
+                </Border>
                 <Button x:Name="DashboardBtn"
-                        CornerRadius="20"
-                        Content="DASHBOARD"
+                        CornerRadius="10"
+                        Content="Dashboard"
+                        
                         Click="Dashboard_click"/>
 
                 <Button x:Name="ProtectionBtn"
-                        CornerRadius="20"
-                        Content="PROTECTION"
+                        CornerRadius="10"
+                        Content="Protection"
                         Click="Protection_click"/>
 
                 <Button x:Name="WebSecurityBtn"
-                        CornerRadius="20"
-                        Content="WEB SECURITY"
+                        CornerRadius="10"
+                        Content="Web Security"
                         Click="WebSecurity_click"/>
 
                 <Button x:Name="DevicesBtn"
-                        CornerRadius="20"
-                        Content="DEVICES"
+                        CornerRadius="10"
+                        Content="Devices"
                         Click="Devices_click"/>
 
                 <Button x:Name="SettingsBtn"
-                        CornerRadius="20"
-                        Content="SETTINGS"
+                        CornerRadius="10"
+                        Content="Settings"
                         Click="Settings_click"/>
 
             </StackPanel>

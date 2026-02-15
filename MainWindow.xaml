@@ -13,12 +13,24 @@
         <MicaBackdrop />
     </Window.SystemBackdrop>
 
-    <Grid>
-        <TextBlock Text="Secure Sphere" HorizontalAlignment="Center"/>
-        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" VerticalAlignment="Top" Padding="20" Spacing="5">
-            <Button x:Name="Performancebtn" Content="Performance" CornerRadius="20" Click="Performance_click"/>
-            <Button x:Name="Securitybtn" Content="Security" CornerRadius="20" Click="Security_click"/>
+    <Grid Background="#0F0F0F">
+        <TextBlock Text="Secure Sphere™" Margin="10"/>
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" VerticalAlignment="Top" Margin="0,12,0,0" Padding="5" Spacing="5" >
             
+            <!-- Security Button -->
+            <Button x:Name="Securitybtn" CornerRadius="5" Click="Security_click">
+                <StackPanel Orientation="Horizontal" Spacing="5">
+                    <Image Source="/Assets/shield.png" Width="16" Height="16"/>
+                </StackPanel> 
+            </Button>
+            
+            <!-- Performance Button -->
+            <Button x:Name="Performancebtn" CornerRadius="5" Click="Performance_click">
+                <StackPanel Orientation="Horizontal" Spacing="5">
+                    <Image Source="/Assets/Performance.png" Width="16" Height="16"/> 
+                </StackPanel>
+            </Button>
+
         </StackPanel>
         <Frame x:Name="MainFrame" Grid.Row="1"/>
     </Grid>
